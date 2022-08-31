@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pokedex App </title>
+    <link rel="stylesheet" href="./pokedex.css">
+</head>
+
+<!-- Start HTML Document Body -->
+
+<body>
+
+    <header class="top">
+
+        <!-- Title -->
+        <h1>Pokedex App</h1>
+
+        <!-- Create Form -->
+        <!-- This form uses dynamic css class assigning to achieve modal functionality -->
+        <div id="create-form">
+
+            <!-- Name of pokemon in here -->
+            <input type="text" placeholder="Valid Pokemon's name here.." name="name" id="name">
+            <div class="pokeInput">
+            <select class="form-select" name="type" id="type">
+
+                <option value="" disabled selected>What type is the Pokemon?</option><!--Placeholder-->
+
+               
+
+                <!-- Options -->
+                <option value="normal">Normal</option>
+                <option value="fire">Fire</option>
+                <option value="grass">Grass</option>
+                <option value="water">Water</option>
+                <option value="electric">Electric</option>
+                <option value="flying">Flying</option>
+                <option value="fighting">Fighting</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="rock">Rock</option>
+                <option value="psychic">Psychic</option>
+                <option value="fighting">Fighting</option>
+                <option value="bug">Bug</option>
+                <option value="ghost">Ghost</option>
+                <option value="steel">Steel</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="fairy">Fairy</option>
+            </select>
+            
+            <div class="pokeInput"></div>
+            <select class= "form-select" name="region" id="region">
+                <option value="" disabled selected>Select the Generation the pokemon was introduced</option><!--Placeholder-->
+						
+                <!-- Options -->
+                <option value="Kanto"> Kanto (Generation I)</option>
+                <option value="Johto"> Johto (Generation II)</option>
+                <option value="Hoenn"> Hoenn (Generation III)</option>
+                <option value="Sinnoh"> Sinnoh (Generation IV)</option>
+                <option value="Unova"> Unova (Generation V)</option>
+                <option value="Kalos"> Kalos (Generation VI)</option>
+                <option value="Alola"> Alola (Generation VII)</option>
+                <option value="Galar"> Galar (Generation VIII)</option>
+            </select>
+
+            <!-- When button is clicked functionality will run -->
+            <button onclick="logic()"> Add Pokemon </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="center">
+
+        <div class="side">
+
+        </div>
+
+        <!-- Main App Space -->
+        <!-- Display all object in here using DOM api -->
+        <div id="app">
+            <main class="center">
+                <div class="pokemonBox"></div>
+                <div id="pokeContainer"></div>
+            </main>
+    
+            <ul id="pokedex-entries">
+                <!-- Append entries here -->
+            </ul>
+
+        </div>
+
+        <div class="side">
+
+        </div>
+
+    </main>
+
+
+    <footer class="top">
+
+    </footer>
+
+    <!-- JavaScript file link -->
+    <script src="pokedex.js"></script>
+
+</body>
+<!-- End of HTML Document Body -->
+
+</html>
